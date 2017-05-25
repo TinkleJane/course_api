@@ -1,7 +1,7 @@
 class Api::V1::TeachersController < ApiController
   def index
     @teachers = Teacher.all
-    render json: @teachers.to_json(include: :courses)
+    render json: @teachers, each_serializer: TeacherSerializer
   end
 
   def destory
