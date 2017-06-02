@@ -32,13 +32,6 @@ ActiveRecord::Schema.define(version: 20170525035238) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "teacher_relationships", force: :cascade do |t|
-    t.integer  "teacher_id"
-    t.integer  "student_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "teachers", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
